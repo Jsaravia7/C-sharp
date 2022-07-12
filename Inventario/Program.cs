@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace inventario
 {
     class Program
@@ -19,6 +20,7 @@ namespace inventario
                 Console.WriteLine("3 - Salida de Inventario");
                 Console.WriteLine("0 - Salir");
                 opcion = Console.ReadLine();
+
 
                 switch (opcion)
                 {
