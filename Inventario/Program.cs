@@ -20,6 +20,7 @@ namespace inventario
                 Console.WriteLine("3 - Ajustes Positivos");
                 Console.WriteLine("4 - Ajustes Negativos");
                 Console.WriteLine("0 - Salir");
+                Console.Write("Ingrese una opcion: ");
                 opcion = Console.ReadLine();
 
                 switch (opcion)
