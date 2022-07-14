@@ -2,7 +2,7 @@ public class Alumno
 {
     public int Id { get; set;}
 
-    public string Primernombre{get; set;}
+    public string PrimerNombre{get; set;}
 
     public string SegundoNombre{get; set;}
 
@@ -11,6 +11,12 @@ public class Alumno
     }
     public Alumno(int id){
         Id = id;
+    }
+
+    public Alumno(string primernombre, string segundoNombre){
+        PrimerNombre = primernombre;
+        SegundoNombre = segundoNombre;
+
     }
 
 }

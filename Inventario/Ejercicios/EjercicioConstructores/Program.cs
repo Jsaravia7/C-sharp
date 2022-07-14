@@ -8,20 +8,24 @@ namespace propiedades
         {
           Alumno a = new Alumno();
           a.Id = 1;
-          a.Primernombre = "Juan";
+          a.PrimerNombre = "Juan";
           a.SegundoNombre = "Perez";
 
           Alumno b = new Alumno();
           b.Id = 2;
-          b.Primernombre = "Maria";
+          b.PrimerNombre = "Maria";
           b.SegundoNombre = "Martinez";
 
           Alumno c =new Alumno(3);
-          b.Primernombre = "Pedro";
+          b.PrimerNombre = "Pedro";
+
+          Alumno d = new Alumno("Juan","Jimenez");
+      
 
           Console.WriteLine(a.Id);
           Console.WriteLine(b.Id);
           Console.WriteLine(c.Id);
+          Console.WriteLine(d.PrimerNombre + " "+d.SegundoNombre);
         }
     }
 }
