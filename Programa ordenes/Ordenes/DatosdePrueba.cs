@@ -10,6 +10,7 @@ public class DatosdePrueba
 
     public List<Orden> ListaOrdenes { get; set; }
 
+
     public DatosdePrueba()
     {
         ListadeProductos = new List<Producto>();
@@ -73,6 +74,7 @@ public class DatosdePrueba
         }else
         {
             Console.WriteLine("Cliente: " + cliente.Nombre);
+            Console.WriteLine("");
         }
 
         Console.WriteLine("Ingrese el codigo del vendedor: ");
@@ -95,6 +97,7 @@ public class DatosdePrueba
 
         while (true)
         {
+            Console.WriteLine("");
             Console.WriteLine("Ingrese el producto: ");
             string codigoProducto = Console.ReadLine();
             Producto producto = ListadeProductos.Find(p => p.Codigo.ToString() == codigoProducto);
@@ -115,6 +118,9 @@ public class DatosdePrueba
                 break;
             }
         }   
+        Console.WriteLine("");
+        Console.WriteLine("Total de la orden es de: " + nuevaOrden.Total);
+        Console.ReadLine();
     }
      public void ListarVendedores()
     {
