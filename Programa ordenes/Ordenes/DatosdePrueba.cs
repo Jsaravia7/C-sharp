@@ -109,7 +109,7 @@ public class DatosdePrueba
              {
                 Console.WriteLine("Producto Agregado: " + producto.Descripcion + " con precio de: " + producto.Precio + " Lempiras");
                 nuevaOrden.AgregarProducto(producto);
-                Console.WriteLine("El ISV 15%: " + nuevaOrden.Impuesto);
+                Console.WriteLine("El ISV 15%: " + nuevaOrden.Impuesto + " Lempiras");
                 Console.WriteLine("Total de la orden es de: "  + nuevaOrden.totalp + " Lempiras");        
              }
             Console.WriteLine("");
@@ -160,5 +160,31 @@ public class DatosdePrueba
             Console.WriteLine(producto.Codigo + " | " + producto.Descripcion + " | " + producto.Precio);
         }
             Console.ReadLine();
+    }
+    public void ListarOrdenes()
+    {
+        Console.Clear();
+        Console.WriteLine("****************");
+        Console.WriteLine("Lista de Ordenes");
+        Console.WriteLine("****************");
+
+        foreach (var orden in ListaOrdenes)
+        {
+            Console.WriteLine(orden.Codigo + " | " + orden.Fecha + " | ");
+            Console.WriteLine(orden.Cliente.Nombre + " | " + orden.Vendedor.Nombre);
+            Console.WriteLine("**********Articulos***********");
+            Console.WriteLine("");  
+            foreach (var detalle in orden.ListaOrdenDetalle)
+            {
+                Console.WriteLine("     "+ detalle.Producto.Descripcion + " | " + detalle.Cantidad + " | " + detalle.Producto.Precio);
+            }
+            Console.WriteLine("");
+            Console.WriteLine("******************************");
+            Console.WriteLine("");
+            Console.WriteLine("Subtotal de la orden es de: " + orden.Subtotal + " Lempiras");
+            Console.WriteLine("El total de la compra con interes es: " + orden.Total + " Lempiras");
+        }
+
+        Console.ReadLine();
     }
 }
