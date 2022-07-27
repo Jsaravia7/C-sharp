@@ -109,8 +109,10 @@ public class DatosdePrueba
              {
                 Console.WriteLine("Producto Agregado: " + producto.Descripcion + " con precio de: " + producto.Precio + " Lempiras");
                 nuevaOrden.AgregarProducto(producto);
+                Console.WriteLine("El ISV 15%: " + nuevaOrden.Impuesto);
+                Console.WriteLine("Total de la orden es de: "  + nuevaOrden.totalp + " Lempiras");        
              }
-
+            Console.WriteLine("");
             Console.WriteLine("Desea continuar? s/n");
             string continuar = Console.ReadLine();
             if(continuar.ToLower() == "n")
@@ -119,7 +121,8 @@ public class DatosdePrueba
             }
         }   
         Console.WriteLine("");
-        Console.WriteLine("Total de la orden es de: " + nuevaOrden.Total);
+        Console.WriteLine("Subtotal de la orden es de: " + nuevaOrden.Subtotal + " Lempiras");
+        Console.WriteLine("Total de la orden es de: " + nuevaOrden.Total +" Lempiras");
         Console.ReadLine();
     }
      public void ListarVendedores()
