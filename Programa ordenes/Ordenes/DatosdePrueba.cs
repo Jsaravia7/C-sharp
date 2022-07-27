@@ -170,7 +170,7 @@ public class DatosdePrueba
 
         foreach (var orden in ListaOrdenes)
         {
-            Console.WriteLine(orden.Codigo + " | " + orden.Fecha + " | ");
+            Console.WriteLine(orden.Codigo + " | " + orden.Fecha.ToString("d") + " | ");
             Console.WriteLine(orden.Cliente.Nombre + " | " + orden.Vendedor.Nombre);
             Console.WriteLine("**********Articulos***********");
             Console.WriteLine("");  
