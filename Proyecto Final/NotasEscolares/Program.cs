@@ -22,6 +22,10 @@ namespace NotasEscolares
             Console.WriteLine("2. -- Lista de Docentes");
             Console.WriteLine("3. -- Mostrar Estudiantes");
             Console.WriteLine("4. -- Mostrar Asignaturas");
+            Console.WriteLine("");
+            Console.WriteLine("**************");
+            Console.WriteLine("Calificaciones");
+            Console.WriteLine("**************");
             Console.WriteLine("5. -- Ingreso de Notas");
             Console.WriteLine("6. -- Notas Finales");
             Console.WriteLine("0. -- Salir");

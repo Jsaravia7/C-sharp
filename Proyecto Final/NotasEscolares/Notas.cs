@@ -20,6 +20,8 @@ public class Notas
 
         ListaAsignatura = new List<Asignatura>();
         CargarAsignaturas();
+
+
     }
     private void CargarUsuario()
     {
@@ -196,7 +198,7 @@ public class Notas
             Console.WriteLine("");
             Console.WriteLine("Ingrese Usuario");
             string usuario = Console.ReadLine();
-            Usuario usuario1 = ListaUsuario.Find(u => u.Nombre == usuario);
+            Usuario usuario1 = ListaUsuario.Find(u => u.Nombre.ToLower() == usuario);
             if (usuario1 == null)
             {
             Console.WriteLine("Usuario no encontrado");
@@ -206,7 +208,7 @@ public class Notas
             {
                 Console.WriteLine("Bienvenido : " +"Profesor(a) " + usuario1.Nombre + " | " + usuario1.Apellido);
                 Console.WriteLine("");
-            } 
+            }
             Console.ReadLine();
-        }
+        }            
 }
