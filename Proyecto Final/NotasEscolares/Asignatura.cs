@@ -6,8 +6,6 @@ public class Asignatura
 
     public int Notapromedio { get; set; }
 
-    public int NotaFinal { get; set; }
-
     public int NotaA { get; set; }
 
     public int NotaB { get; set; }

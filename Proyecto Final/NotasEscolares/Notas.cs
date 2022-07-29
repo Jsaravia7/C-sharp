@@ -8,6 +8,8 @@ public class Notas
 
     public List<Asignatura> ListaAsignatura { get; set; }
 
+    public int NotaFinal { get; set; }
+
     public Notas()
     {
         ListaUsuario = new List<Usuario>();
@@ -128,11 +130,64 @@ public class Notas
         Console.WriteLine("");
         Console.WriteLine("Estudiante: " + estudiante.Nombre + " | " + estudiante.Apellido);
         Console.WriteLine("");
-
       }
       Console.ReadLine();
-      
+
+      foreach (var asignatura in ListaAsignatura)
+      {
+        Console.WriteLine("*****************************");
+        Console.WriteLine("Asignatura: " + asignatura.NombreAsignatura);
+        Console.WriteLine("*****************************");
+        Console.WriteLine("");
+        Console.WriteLine("Ingrese las 4 notas obtenidas");
+        Console.WriteLine("");
+        Console.WriteLine("Nota A: ");
+        asignatura.NotaA = Int32.Parse(Console.ReadLine());
+        Console.WriteLine("Nota B: ");
+        asignatura.NotaB = Int32.Parse(Console.ReadLine());
+        Console.WriteLine("Nota C: ");
+        asignatura.NotaC = Int32.Parse(Console.ReadLine());
+        Console.WriteLine("Nota D: ");
+        asignatura.NotaD = Int32.Parse(Console.ReadLine());
+
+        asignatura.Notapromedio = (asignatura.NotaA + asignatura.NotaB + asignatura.NotaC + asignatura.NotaD)/4;
+      }
+      foreach (var nota in ListaAsignatura)
+      {
+        Console.WriteLine("El promedio es de: " + nota.Notapromedio + " en la clase de " + nota.NombreAsignatura);
+      }
+      Console.ReadLine();
     }
+
+    public void Notafinales()
+    {
+      Console.Clear();
+      Console.WriteLine("****************");
+      Console.WriteLine("Calicacion Final");
+      Console.WriteLine("****************");
+      Console.WriteLine("Ingrese el Nombre del Estudiante: ");
+      string nombre = Console.ReadLine();
+
+      Estudiantes estudiante = ListaEstudiantes.Find(e => e.Nombre.ToString() == nombre);
+      if (estudiante == null)
+      {
+        Console.WriteLine("Estudiante no encontrado");
+        Console.ReadLine();
+        return;
+      }
+      else
+      {
+        Console.WriteLine("");
+        Console.WriteLine("Estudiante: " + estudiante.Nombre + " | " + estudiante.Apellido);
+        Console.WriteLine("");
+      }
+      foreach (var nota in ListaAsignatura)
+      {
+        Console.WriteLine("EL Promedio final es de: " + nota.Notapromedio + " en la clase de " + nota.NombreAsignatura);
+        NotaFinal = (nota.Notapromedio / 6); 
+      }
+      Console.ReadLine();
+    } 
      public void IngresoUsuario()
        {
             Console.Clear();

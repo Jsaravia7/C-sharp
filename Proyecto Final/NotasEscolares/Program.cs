@@ -23,6 +23,9 @@ namespace NotasEscolares
             Console.WriteLine("3. -- Mostrar Estudiantes");
             Console.WriteLine("4. -- Mostrar Asignaturas");
             Console.WriteLine("5. -- Ingreso de Notas");
+            Console.WriteLine("6. -- Notas Finales");
+            Console.WriteLine("6. -- Salir");
+
             opcion = Console.ReadLine();
 
             switch (opcion)
@@ -41,6 +44,9 @@ namespace NotasEscolares
                      break;
                 case "5":
                      datos.ingresarNotas();
+                     break;
+                case "6":
+                     datos.Notafinales();
                      break;     
                 default:
                 break;
