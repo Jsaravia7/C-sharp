@@ -24,8 +24,9 @@ namespace NotasEscolares
             Console.WriteLine("4. -- Mostrar Asignaturas");
             Console.WriteLine("5. -- Ingreso de Notas");
             Console.WriteLine("6. -- Notas Finales");
-            Console.WriteLine("6. -- Salir");
-
+            Console.WriteLine("0. -- Salir");
+            Console.WriteLine("");
+            Console.WriteLine("Ingrese una de la opciones: ");
             opcion = Console.ReadLine();
 
             switch (opcion)

@@ -118,7 +118,7 @@ public class Notas
       Console.WriteLine("Ingrese el Nombre del Estudiante: ");
       string nombre = Console.ReadLine();
 
-      Estudiantes estudiante = ListaEstudiantes.Find(e => e.Nombre.ToString() == nombre);
+      Estudiantes estudiante = ListaEstudiantes.Find(e => e.Nombre.ToLower() == nombre);
       if (estudiante == null)
       {
         Console.WriteLine("Estudiante no encontrado");
@@ -141,13 +141,13 @@ public class Notas
         Console.WriteLine("");
         Console.WriteLine("Ingrese las 4 notas obtenidas");
         Console.WriteLine("");
-        Console.WriteLine("Nota A: ");
+        Console.WriteLine("Nota 1: ");
         asignatura.NotaA = Int32.Parse(Console.ReadLine());
-        Console.WriteLine("Nota B: ");
+        Console.WriteLine("Nota 2: ");
         asignatura.NotaB = Int32.Parse(Console.ReadLine());
-        Console.WriteLine("Nota C: ");
+        Console.WriteLine("Nota 3: ");
         asignatura.NotaC = Int32.Parse(Console.ReadLine());
-        Console.WriteLine("Nota D: ");
+        Console.WriteLine("Nota 4: ");
         asignatura.NotaD = Int32.Parse(Console.ReadLine());
 
         asignatura.Notapromedio = (asignatura.NotaA + asignatura.NotaB + asignatura.NotaC + asignatura.NotaD)/4;
@@ -168,7 +168,7 @@ public class Notas
       Console.WriteLine("Ingrese el Nombre del Estudiante: ");
       string nombre = Console.ReadLine();
 
-      Estudiantes estudiante = ListaEstudiantes.Find(e => e.Nombre.ToString() == nombre);
+      Estudiantes estudiante = ListaEstudiantes.Find(e => e.Nombre.ToLower() == nombre);
       if (estudiante == null)
       {
         Console.WriteLine("Estudiante no encontrado");
@@ -183,9 +183,8 @@ public class Notas
       }
       foreach (var nota in ListaAsignatura)
       {
-        Console.WriteLine("EL Promedio final es de: " + nota.Notapromedio + " en la clase de " + nota.NombreAsignatura);
-        NotaFinal = (nota.Notapromedio / 6); 
-      }
+        Console.WriteLine("EL Promedio final es de: " + nota.Notapromedio + " en la clase de " + nota.NombreAsignatura); 
+      } 
       Console.ReadLine();
     } 
      public void IngresoUsuario()
@@ -210,7 +209,4 @@ public class Notas
             } 
             Console.ReadLine();
         }
-         
-   
-
 }

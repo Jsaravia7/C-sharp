@@ -21,7 +21,7 @@ public class Asignatura
     }
 
     public void Resultado()
-    {
+    {   
         NotaA = 0;
         NotaB = 0;
         NotaC = 0;
