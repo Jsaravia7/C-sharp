@@ -163,6 +163,7 @@ public class Notas
 
     public void Notafinales()
     {
+      double suma = 0;
       Console.Clear();
       Console.WriteLine("****************");
       Console.WriteLine("Calicacion Final");
@@ -185,10 +186,13 @@ public class Notas
       }
       foreach (var nota in ListaAsignatura)
       {
-        Console.WriteLine("EL Promedio final es de: " + nota.Notapromedio + " en la clase de " + nota.NombreAsignatura); 
-      } 
+        Console.WriteLine("EL Promedio final es de: " + nota.Notapromedio + " en la clase de " + nota.NombreAsignatura);
+        suma += nota.Notapromedio / 6;
+      }
+      Console.WriteLine(""); 
+      Console.WriteLine("EL Promedio final es de: " + suma.ToString("N2"));
       Console.ReadLine();
-    } 
+     } 
      public void IngresoUsuario()
        {
             Console.Clear();

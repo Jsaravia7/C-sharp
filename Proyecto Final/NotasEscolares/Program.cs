@@ -52,7 +52,7 @@ namespace NotasEscolares
                      break;
                 case "6":
                      datos.Notafinales();
-                     break;     
+                     break;    
                 default:
                 break;
             }

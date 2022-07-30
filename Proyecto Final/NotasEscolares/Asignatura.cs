@@ -4,7 +4,7 @@ public class Asignatura
 
     public string NombreAsignatura { get; set; }
 
-    public int Notapromedio { get; set; }
+    public double Notapromedio { get; set; }
 
     public int NotaA { get; set; }
 
