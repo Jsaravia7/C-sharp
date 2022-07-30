@@ -190,7 +190,7 @@ public class Notas
         suma += nota.Notapromedio / 6;
       }
       Console.WriteLine(""); 
-      Console.WriteLine("EL Promedio final es de: " + suma.ToString("N2"));
+      Console.WriteLine("EL Promedio final de " + estudiante.Nombre + " es de: " + suma.ToString("N2") + " %" );
       Console.ReadLine();
      } 
      public void IngresoUsuario()
