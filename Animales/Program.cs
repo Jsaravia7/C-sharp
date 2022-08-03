@@ -19,6 +19,7 @@ namespace Animales
                 Console.WriteLine("No es animal Domestico");
             }
             Console.WriteLine("------------");
+            p.genero();
             p.Caminar(); 
             p.comer();
             p.Ladrar();
@@ -40,6 +41,7 @@ namespace Animales
                 Console.WriteLine("No es animal Domestico");
             }
             Console.WriteLine("------------");
+            g.genero();
             g.comer();
             g.Volar();
             g.Kikikear();
@@ -62,6 +64,7 @@ namespace Animales
                 Console.WriteLine("No es animal Domestico");
             }
             Console.WriteLine("------------");
+            ga.genero();
             ga.comer();
             ga.Caminar();
             ga.Maullar();
@@ -84,6 +87,7 @@ namespace Animales
                 Console.WriteLine("No es animal Domestico");
             }
             Console.WriteLine("------------");
+            r.genero();
             r.comer();
             r.Atrapar();
             r.Sonido();
@@ -105,6 +109,7 @@ namespace Animales
                 Console.WriteLine("No es animal Domestico");
             }
             Console.WriteLine("------------");
+            z.genero();
             z.Inquieto();
             z.Alimento();
             z.Zumbido();
@@ -126,6 +131,7 @@ namespace Animales
                 Console.WriteLine("No es animal Domestico");
             }
             Console.WriteLine("------------");
+            pz.genero();
             pz.Bañar();
             pz.Agallas();
             pz.Burbujas();
@@ -147,6 +153,7 @@ namespace Animales
                 Console.WriteLine("No es animal Domestico");
             }
             Console.WriteLine("------------");
+            c.genero();
             c.comer();
             c.Gruñir();
             c.Sangre();

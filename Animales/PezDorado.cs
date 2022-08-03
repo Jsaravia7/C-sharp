@@ -12,6 +12,10 @@ public class PezDorado:Pez
     {
         Esdomestico = esdomestico;
     }
+    public void genero()
+    {
+        Console.WriteLine("Es un Pez");
+    }
      public void Burbujas()
     {
         Console.WriteLine("No hace sonidos, solo burbujas");

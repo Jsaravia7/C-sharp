@@ -8,7 +8,10 @@ public class Gallina: Ave
     {
         Esdomestico = true;
     }
-
+    public void genero()
+    {
+        Console.WriteLine("Es un Ave");
+    }
     public Gallina(bool esdomestico)
     {
         Esdomestico = esdomestico;

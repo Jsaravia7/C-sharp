@@ -17,6 +17,10 @@ public class Perro: Mamifero
         Esdomestico = esdomestico;
 
     }
+    public void genero()
+    {
+        Console.WriteLine("Es un Mamifero");
+    }
       public void Ladrar()
     {
         Console.WriteLine("Gua gua gua");

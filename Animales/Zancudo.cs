@@ -9,6 +9,10 @@ public class Zancudo: Insecto
     {
         Esdomestico = false;
     }
+    public void genero()
+    {
+        Console.WriteLine("Es un Insecto");
+    }
     public Zancudo(bool esdomestico) 
     {
         Esdomestico = esdomestico;

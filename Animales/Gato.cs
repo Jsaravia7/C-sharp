@@ -10,8 +10,13 @@ public Gato()
     {
         Esdomestico = true;
     }
+    public void genero()
+    {
+        Console.WriteLine("Es un Mamifero");
+    }
 
     public Gato(bool esdomestico) // <- Polimorfismo
+
 
     {
 

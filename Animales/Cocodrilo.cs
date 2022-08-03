@@ -2,7 +2,7 @@ using System;
 
 public class Cocodrilo: Reptil
 {
- 
+
     public bool Esdomestico { get; set; }
 
 
@@ -14,6 +14,10 @@ public class Cocodrilo: Reptil
     public Cocodrilo(bool esdomestico)
     {
         Esdomestico = esdomestico;
+    }
+    public void genero()
+    {
+        Console.WriteLine("Es un reptil");
     }
     public void Peligroso()
     {

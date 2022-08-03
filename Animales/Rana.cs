@@ -13,6 +13,10 @@ public class Rana:Anfibios
         Esdomestico = false;
 
     }
+    public void genero()
+    {
+        Console.WriteLine("Es un Anfibio");
+    }
      public Rana(bool esdomestico)
      {
         Esdomestico = esdomestico;
