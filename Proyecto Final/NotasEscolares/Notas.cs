@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 public class Notas
 {
-    public List<Usuario> ListaUsuario { get; set; }
-
     public List<Estudiantes> ListaEstudiantes { get; set; }
 
     public List<Asignatura> ListaAsignatura { get; set; }
@@ -12,8 +10,6 @@ public class Notas
 
     public Notas()
     {
-        ListaUsuario = new List<Usuario>();
-        CargarUsuario();
 
         ListaEstudiantes = new List<Estudiantes>();
         CargarEstudiantes();
@@ -23,18 +19,6 @@ public class Notas
 
 
     }
-    private void CargarUsuario()
-    {
-      Usuario u1 = new Usuario(501,"Ingeniero","Bily","Fernandez");
-      ListaUsuario.Add(u1);
-
-      Usuario u2 = new Usuario(502,"Ingeniero","Jorge","Saravia");
-      ListaUsuario.Add(u2);
-
-      Usuario u3 = new Usuario(502,"Ingeniera","Alejandra","Pagoada");
-      ListaUsuario.Add(u3);
-    }
-
     private void CargarEstudiantes()
     {
       Estudiantes e1 = new Estudiantes(001,"Benito","Juarez");
@@ -93,20 +77,6 @@ public class Notas
         foreach (var asignatura in ListaAsignatura)
         {
           Console.WriteLine(asignatura.Codigo + " | " + asignatura.NombreAsignatura);
-        }
-        Console.ReadLine();
-    }
-
-    public void ListarUsuario()
-    {
-        Console.Clear();
-        Console.WriteLine("**************************");
-        Console.WriteLine("Lista de Usuarios Maestros");
-        Console.WriteLine("**************************");
-         
-        foreach (var usuario in ListaUsuario)
-        {
-          Console.WriteLine( usuario.Codigo + " | " + usuario.Profesion + " | " + usuario.Nombre + " | " + usuario.Apellido);
         }
         Console.ReadLine();
     }
@@ -192,27 +162,5 @@ public class Notas
       Console.WriteLine(""); 
       Console.WriteLine("EL Promedio final de " + estudiante.Nombre + " es de: " + suma.ToString("N2") + " %" );
       Console.ReadLine();
-     } 
-     public void IngresoUsuario()
-       {
-            Console.Clear();
-            Console.WriteLine("****************");
-            Console.WriteLine("Inicio de sesion");
-            Console.WriteLine("****************");
-            Console.WriteLine("");
-            Console.WriteLine("Ingrese Usuario");
-            string usuario = Console.ReadLine();
-            Usuario usuario1 = ListaUsuario.Find(u => u.Nombre.ToLower() == usuario);
-            if (usuario1 == null)
-            {
-            Console.WriteLine("Usuario no encontrado");
-            Console.ReadLine();
-            return; 
-            }else
-            {
-                Console.WriteLine("Bienvenido : " +"Profesor(a) " + usuario1.Nombre + " | " + usuario1.Apellido);
-                Console.WriteLine("");
-            }
-            Console.ReadLine();
-        }            
+     }       
 }
